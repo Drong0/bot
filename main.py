@@ -8,11 +8,11 @@ from gpt import ChatSession
 from keyboards import level_keyboard, topic_keyboard, option_keyboard
 from utils import check_email, load_paid_emails
 
-bot = Bot(token=os.environ.get(TOKEN))
+bot = Bot(token=os.environ.get('TOKEN'))
 dp = Dispatcher(bot)
 dp.middleware.setup(LoggingMiddleware())
 
-chat_session = ChatSession(api_key=os.environ.get(OPENAI_API_KEY))
+chat_session = ChatSession(api_key=os.environ.get('OPENAI_API_KEY'))
 # States
 LEVEL, TOPIC, MESSAGE, OPTION = range(4)
 
